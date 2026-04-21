@@ -14,12 +14,14 @@ jobs:
         uses: advanced-security/python-lint-code-scanning-action@v1.1.3
         with:
           linter: flake8
-
-    #DISCORD:
-      runs-on: ubuntu-latest
-      steps:
-        - uses: actions/checkout@v3
-        - name: Run Discord Notify action
-          uses: PingChunChung/actions-discord-notifier
-          with:
-            webhook_url:  ${{ secrets.DISCORD_WEBHOOKS_URL }}
+jobs:
+  discord:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Run Discord Webhook
+        uses: Snidd1/discord-comits@v1.6
+        with:
+          webhook_url:  ${{ secrets.DISCORD_WEBHOOKS_URL }}
+          template: "avatar-with-link"
+          include-extras: true

@@ -15,7 +15,7 @@ jobs:
         with:
           linter: flake8
 
-    DISCORD:
+    #DISCORD:
       runs-on: ubuntu-latest
       steps:
         - uses: actions/checkout@v3

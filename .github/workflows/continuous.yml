@@ -18,8 +18,8 @@ jobs:
     DISCORD:
       runs-on: ubuntu-latest
       steps:
-        - uses: actions/checkout@v5
-        - name: Run Discord Webhook
-          uses: dezinha/discord-notification@v1.0.0
+        - uses: actions/checkout@v3
+        - name: Run Discord Notify action
+          uses: PingChunChung/actions-discord-notifier
           with:
             webhook_url:  ${{ secrets.DISCORD_WEBHOOKS_URL }}

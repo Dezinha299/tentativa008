@@ -10,8 +10,8 @@ jobs:
       - name: Run Discord Webhook
         uses: Sniddl/discord-commits@v1.8
         with:
-          webhook: ${{ secrets.DISCORD_WEBHOOK_TESTE_URL }}
+          webhook: ${{ secrets.DISCORD_WEBHOOK_TESTE }}
           template: "avatar-with-link"
           include-extras: true
 
-          #tentativa016
+          #tentativa018
